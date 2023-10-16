@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="height=device-height, 
+    width=device-width, initial-scale=1.0, 
+    minimum-scale=1.0, maximum-scale=1.0, 
+    user-scalable=no, target-densitydpi=device-dpi" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+    
+    
+    <title>Vite App</title>
+    <script type="module" crossorigin src="./assets/index-ffdb2ccd.js"></script>
+    <link rel="stylesheet" href="./assets/index-53890789.css">
+  </head>
+  <body>
+    <canvas class="three-canvas"></canvas>
+    <div class="loading-page">
+      <img src="images/loader.gif" alt="" class="loader">
+     
+    </div>
+    <div class="intro-wrapper">
+      <h3 class="name-tag">
+        MERT
+      </h3>
+      <h3 class="surname-tag">
+        SAHIN
+      </h3>
+      <h3 class="title-tag">Creative Developer</h3>
+      <img src="images/downwhite.png" alt="" class="down-mouse down-mouse-1">
+    </div>
+
+   <div class="about-wrapper">
+    <a href="javascript:void(0);"   class="about-tag">ABOUT</a>
+    <img src="images/updownwhite.png" alt="" class="down-mouse down-mouse-2">
+   </div>
+
+   <div class="examples-wrapper">
+    <a href="javascript:void(0);"  class="examples-tag">EXAMPLES</a>
+    <p class="under-construction">( Under construction )</p>
+    <img src="images/updownwhite.png" alt="" class="down-mouse down-mouse-3">
+   </div>
+
+   <div class="contact-wrapper">
+    <a href="javascript:void(0);"  class="contact-tag">CONTACT</a>
+    <img src="images/upwhite.png" alt="" class="down-mouse down-mouse-4">
+   </div>
+   
+    
+    
+    <script>
+
+ /** let fontsize = window.innerWidth/25
+   
+document.fonts.ready.then(function () {
+
+  //Name
+	let nameContainer = document.querySelector(".name-tag")
+
+      let nameText = new Blotter.Text("MERT",{
+        family:"Orbitron",
+        size:fontsize + 25,
+        fill:"#fff",
+        paddingTop:0,
+        paddingBottom:0,
+        leading : 0.8
+
+      })
+    
+      let blotterMaterialName = new Blotter.FliesMaterial()
+
+      blotterMaterialName.uniforms.uPointCellWidth.value = 0.03
+      blotterMaterialName.uniforms.uPointRadius.value = 1
+      blotterMaterialName.uniforms.uSpeed.value = 3
+
+      let nameBlotter = new Blotter(blotterMaterialName,{
+        texts:nameText
+      })
+
+      let nameScope = nameBlotter.forText(nameText)
+      
+      nameScope.appendTo(nameContainer)
+
+
+      //Surname
+      let surnameContainer = document.querySelector(".surname-tag")
+
+      let surnameText = new Blotter.Text("SAHIN",{
+        family:"Orbitron",
+        size:fontsize+25,
+        fill:"#fff",
+        paddingTop:0,
+        paddingBottom:0,
+        leading:1
+
+      })
+    
+      let blotterMaterialSurname = new Blotter.FliesMaterial()
+      blotterMaterialSurname.uniforms.uPointCellWidth.value = 0.02
+      blotterMaterialSurname.uniforms.uPointRadius.value = 1
+      blotterMaterialSurname.uniforms.uSpeed.value = 3
+
+      let surnameBlotter = new Blotter(blotterMaterialSurname,{
+        texts:surnameText
+      })
+
+      let surnameScope = surnameBlotter.forText(surnameText)
+      
+      surnameScope.appendTo(surnameContainer)
+
+
+      
+
+
+//Title
+let titleContainer = document.querySelector(".title-tag")
+
+let titleText = new Blotter.Text("CreativeDeveloper",{
+  family:"Orbitron",
+  size:fontsize + 5,
+  fill:"#fff",
+  paddingTop:0,
+  paddingBottom:0,
+  leading:1
+  
+
+})
+
+let blotterMaterialTitle = new Blotter.FliesMaterial()
+blotterMaterialTitle.uniforms.uPointCellWidth.value = 0.02
+blotterMaterialTitle.uniforms.uPointRadius.value = 2
+blotterMaterialTitle.uniforms.uSpeed.value = 3
+
+let titleBlotter = new Blotter(blotterMaterialTitle,{
+  texts:titleText
+})
+
+let titleScope = titleBlotter.forText(titleText)
+
+titleScope.appendTo(titleContainer)
+
+//About
+
+let aboutContainer = document.querySelector(".about-wrapper")
+
+      let aboutText = new Blotter.Text("ABOUT",{
+        family:"Orbitron",
+        size:fontsize,
+        fill:"#fff",
+        paddingTop:0,
+        paddingBottom:0,
+        leading : 1
+
+      })
+    
+      let blotterMaterialAbout = new Blotter.FliesMaterial()
+
+      blotterMaterialAbout.uniforms.uPointCellWidth.value = 0.03
+      blotterMaterialAbout.uniforms.uPointRadius.value = 1
+      blotterMaterialAbout.uniforms.uSpeed.value = 3
+
+      let aboutBlotter = new Blotter(blotterMaterialAbout,{
+        texts:aboutText
+      })
+
+      let aboutScope = aboutBlotter.forText(aboutText)
+      
+    aboutScope.appendTo(aboutContainer)
+
+//Examples
+
+
+
+let examplesContainer = document.querySelector(".examples-wrapper")
+
+      let examplesText = new Blotter.Text("EXAMPLES",{
+        family:"Orbitron",
+        size:fontsize,
+        fill:"#fff",
+        paddingTop:0,
+        paddingBottom:0,
+        leading : 1
+
+      })
+    
+      let blotterMaterialExamples = new Blotter.FliesMaterial()
+
+      blotterMaterialExamples.uniforms.uPointCellWidth.value = 0.03
+      blotterMaterialExamples.uniforms.uPointRadius.value = 1
+      blotterMaterialExamples.uniforms.uSpeed.value = 3
+
+      let examplesBlotter = new Blotter(blotterMaterialExamples,{
+        texts:examplesText
+      })
+
+      let examplesScope = examplesBlotter.forText(examplesText)
+      
+    examplesScope.appendTo(examplesContainer)
+
+  
+
+  //Contact
+
+let contactContainer = document.querySelector(".contact-wrapper")
+
+let contactText = new Blotter.Text("CONTACT",{
+  family:"Orbitron",
+  size:fontsize,
+  fill:"#fff",
+  paddingTop:0,
+  paddingBottom:0,
+  leading : 1
+
+})
+
+let blotterMaterialContact = new Blotter.FliesMaterial()
+
+blotterMaterialContact.uniforms.uPointCellWidth.value = 0.03
+blotterMaterialContact.uniforms.uPointRadius.value = 1
+blotterMaterialContact.uniforms.uSpeed.value = 3
+
+let contactBlotter = new Blotter(blotterMaterialContact,{
+  texts:contactText
+})
+
+let contactScope = contactBlotter.forText(contactText)
+
+contactScope.appendTo(contactContainer)
+
+}.bind(this)); **/
+        
+      
+
+
+    </script>
+  </body>
+</html>
