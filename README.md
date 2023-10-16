@@ -1,4 +1,4 @@
-#Personal Portfolio
+# Personal Portfolio
 
 Personal portfolio project made with Three.js, Gsap and Swipe-Listener for mobile swipe events.
 
